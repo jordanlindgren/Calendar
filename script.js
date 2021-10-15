@@ -2,6 +2,18 @@ let currentDate = new Date();
 let options = { weekday: "long", month: "long", day: "numeric" };
 $("#currentDay").text(currentDate.toLocaleDateString(undefined, options));
 
+for (let i = 9; i <= 12; i++) {
+  let slot = document.getElementById(`${i}am_slot`);
+  let storedItem = localStorage.getItem(`${i}`);
+  slot.value = storedItem ? storedItem : "text to be scheduled";
+}
+
+for (let i = 1; i <= 5; i++) {
+  let slot = document.getElementById(`${i}am_slot`);
+  let storedItem = localStorage.getItem(`${i}`);
+  slot.value = storedItem ? storedItem : "text to be scheduled";
+}
+
 function resetColor() {
   let currentHour = new Date().getHours();
 
@@ -35,13 +47,19 @@ resetColor();
 setInterval(resetColor, 1000);
 // setInterval( fn , miliseconds )
 
-let schedule = {};
+let schedule = ["", "", "", "", "", "", "", ""];
 
-function test(event) {
-  let foo = $(event.target).parent().parent().data("hour");
-  let eventText = $(event.target).parent().siblings(".time-block");
+function textAccept(event) {
+  let slot = $(event.target).parent().parent().data("hour");
+  let eventText = $(event.target)
+    .parent()
+    .siblings(".time-block")
+    .children(".textColumn")
+    .eq(0)
+    .val();
   // need to link text to save button and local storage the whole line
-  console.log(eventText);
+  localStorage.setItem(`${slot}`, eventText);
+  console.log(slot, eventText);
 }
 
-$(".saveBtn").click(test);
+$(".saveBtn").click(textAccept);

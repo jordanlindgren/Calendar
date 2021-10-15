@@ -1,4 +1,14 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# calendar App
+
+## .\assests\images\portfolioimg.jpg
+
+## homework\calendar/Capture.JPG
+
+## used css, html and javascript
+
+## https://github.com/jordanlindgren/Calendar
+
+<!-- # 05 Third-Party APIs: Work Day Scheduler
 
 ## Your Task
 
@@ -39,7 +49,7 @@ The following animation demonstrates the application functionality:
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria: 
+This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
@@ -86,4 +96,4 @@ You are required to submit the following for review:
 * The URL of the GitHub repository, with a unique name and a README describing the project
 
 - - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved. -->
